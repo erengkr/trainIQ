@@ -2,7 +2,7 @@
 
 ## Live demo
 
-[train-iq.vercel.app](train-iq.vercel.app)
+[train-iq.vercel.app](https://train-iq.vercel.app)
 
 ## Project Description
 
