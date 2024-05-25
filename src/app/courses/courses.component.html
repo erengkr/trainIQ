@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Assigned To</th>
+      <th scope="col">Description</th>
+      <th scope="col">Due Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courseData; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ course.assigned_to }}</td>
+      <td>{{ course.description }}</td>
+      <td>{{ course.due_date }}</td>
+      <td>{{ course.status }}</td>
+      <td>{{ course.title }}</td>
+    </tr>
+</table>

@@ -1,0 +1,162 @@
+<button
+  class="btn btn-success"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+  aria-current="page"
+  style="margin-left: 10px"
+>
+  Add Employee
+</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title: {{ title }}</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Skills</th>
+      <th scope="col">Overall Score/Current Score</th>
+      <th scope="col">Taken Lessons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of team.employees; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ employee.title }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.skills_being_developed }}</td>
+      <td>{{ overall }}/{{ employee.current_score }}</td>
+      <td>{{ employee.lessons_taken }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="inputTitle" class="form-label">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputTitle"
+              [(ngModel)]="inputTitle"
+              name="inputTitle"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              [(ngModel)]="name"
+              name="name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              [(ngModel)]="email"
+              name="email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="skills" class="form-label">Skills</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Active Listening"
+                id="skill1"
+                [(ngModel)]="skill1"
+                name="skills"
+              />
+              <label class="form-check-label" for="skill1">
+                Active Listening
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Empathy"
+                id="skill2"
+                [(ngModel)]="skill2"
+                name="skills"
+              />
+              <label class="form-check-label" for="skill2"> Empathy </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Problem Solving"
+                id="skill3"
+                [(ngModel)]="skill3"
+                name="skills"
+              />
+              <label class="form-check-label" for="skill3">
+                Problem Solving
+              </label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="score" class="form-label">Current Score</label>
+            <input
+              type="number"
+              class="form-control"
+              id="score"
+              [(ngModel)]="score"
+              name="score"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="lessons" class="form-label">Taken Lessons</label>
+            <input
+              type="number"
+              class="form-control"
+              id="lessons"
+              [(ngModel)]="lessons"
+              name="lessons"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          (click)="addEmployee()"
+          data-bs-dismiss="modal"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
