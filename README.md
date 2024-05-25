@@ -1,27 +1,44 @@
-# Modcom
+# Case for TrainIQ frontend job application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+## Live demo
 
-## Development server
+[train-iq.vercel.app](train-iq.vercel.app)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Project Description
 
-## Code scaffolding
+This is a project for trainiq frontend job application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular
+- Bootstrap 5
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+To install the project, follow these steps:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository to your local machine using the command:
 
-## Running end-to-end tests
+```bash
+git clone https://github.com/erengkr/trainIQ.git
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Navigate to the project directory using the command:
 
-## Further help
+```bash
+cd trainIQ
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Install the dependencies using the command:
+
+```bash
+npm install
+```
+
+4. Run the development server using the command:
+
+```bash
+ng serve --o
+```
+
+5. Open your web browser and navigate to http://localhost:4200 to view the application.
